@@ -39,7 +39,7 @@ pipeline {
                 ){
                     sh 'mvn deploy -DskipTests=true'
                 }
-            
+            }
         }
     }
 }
