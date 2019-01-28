@@ -6,8 +6,8 @@ pipeline {
     }
     stages {
         stage('Build') {
-            echo "Build phase"
             steps {
+                echo "Build phase"
                 withMaven(
                     maven: 'M3'
                 ){
