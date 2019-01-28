@@ -8,7 +8,8 @@ pipeline {
         stage('Build') {
             steps {
                 withMaven(
-                    maven: 'M3'
+                    maven: 'M3',
+                    mavenSettingsConfig: 'ArtifactoryConfig'
                 ){
                     sh 'mvn clean compile'
                 }
@@ -26,7 +27,8 @@ pipeline {
         stage('Install') {
             steps {
                 withMaven(
-                    maven: 'M3'
+                    maven: 'M3',
+                    mavenSettingsConfig: 'ArtifactoryConfig'
                 ){
                     sh 'mvn install -DskipTests=true'
                 }
@@ -35,7 +37,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 withMaven(
-                    maven: 'M3'
+                    maven: 'M3',
+                    mavenSettingsConfig: 'ArtifactoryConfig'
                 ){
                     sh 'mvn deploy -DskipTests=true'
                 }
