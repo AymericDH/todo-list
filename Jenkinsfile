@@ -23,5 +23,14 @@ pipeline {
                 }
             }               
         }
+        stage('Install') {
+            steps {
+                withMaven(
+                    maven: 'M3'
+                ){
+                    sh 'mvn install -DskipTests=true'
+                }
+            }
+        }
     }
 }
