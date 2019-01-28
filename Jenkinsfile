@@ -2,6 +2,7 @@ pipeline {
     agent any
     stages {
         stage('Build') {
+            echo "Build phase"
             steps {
                 withMaven(
                     maven: 'M3'
