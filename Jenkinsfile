@@ -32,5 +32,14 @@ pipeline {
                 }
             }
         }
+        stage('Deploy') {
+            steps {
+                withMaven(
+                    maven: 'M3'
+                ){
+                    sh 'mvn deploy -DskipTests=true'
+                }
+            
+        }
     }
 }
