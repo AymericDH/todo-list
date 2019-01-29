@@ -140,13 +140,13 @@
 	</build>
 	<distributionManagement>
 		<repository>
-			<id>central</id>
-			<name>artiFactory-releases</name>
+			<id>app.central</id>
+			<name>app.central</name>
 			<url>http://192.168.56.101:8081/artifactory/app-release</url>
 		</repository>
 		<snapshotRepository>
-			<id>snapshots</id>
-			<name>artiFactory-snapshots</name>
+			<id>app.snapshots</id>
+			<name>app.snapshots</name>
 			<url>http://192.168.56.101:8081/artifactory/app-snapshot</url>
 		</snapshotRepository>
 	</distributionManagement>
